@@ -159,11 +159,17 @@
             margin: 10px;
             row-gap: 10px;
         }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
         input {
-            width: fit-content;}
+            width: fit-content;
+        }
+        #color, button{
+            width: 5rem;
+        }
     </style>
-    <fieldset>
-        <legend>Login Form</legend>
         <h1>Form Tags</h1>
         <form action="#" method="POST" id="form1">
             <label for="name">Name:</label>
@@ -177,7 +183,141 @@
             <button type="submit">Submit</button>
             <input type="submit" value="Submit"/>
         </form>
-    </fieldset>
+        <fieldset>
+            <legend>Login Form</legend>
+            <form action="#" method="POST" id="loginForm">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" placeholder="Your Name" required autofocus minlength="2"/>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" placeholder="Enter Password" required/>
+                <button type="submit">Submit</button>
+            </form>
+        </fieldset>
+        <fieldset>
+            <legend>Register Form</legend>
+            <form action="#" method="POST" id="loginForm">
+                <p>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Your Name" required autofocus minlength="2"/>
+                </p>
+                <p>
+                    <label for="age">Age:</label>
+                    <input type="number" name="age" id="age" placeholder="Age" required/>
+                </p>
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="abc@xyz.com" required/>
+                </p>
+                <p>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" placeholder="Enter Password" required/>
+                </p>
+                <p>
+                    <label for="cpassword">Confrim Password:</label>
+                    <input type="password" name="cpassword" id="cpassword" placeholder="Enter Password" required/>
+                </p>
+                <p>
+                    <input type="date"/>
+                </p>
+                <p>
+                    <input type="checkbox"/>MERN
+                    <input type="checkbox" checked/>Java Full Stack
+                    <input type="checkbox"/>Python Full Stack
+                </p>
+                <p>
+                    <input type="radio" name="batch"/>Morning
+                    <input type="radio" name="batch" checked/>Evening
+                </p>
+                <p>
+                    <select name="" id="">
+                        <option value="BE">BE</option>
+                        <option value="BTech" selected>BTech</option>
+                        <option value="MBA">MBA</option>
+                    </select>
+                </p>
+                <p>
+                    <select name="" id="" multiple>
+                        <option value="IT">IT</option>
+                        <option value="CSE">CSE</option>
+                        <option value="BioTech">BioTech</option>
+                    </select>
+                </p>
+                <p>
+                    <input type="file" name="" id=""/>
+                </p>
+                <p>
+                    <input type="color" name="color" id="color"/>
+                </p>
+                <p>
+                    <textarea name="" id="" placeholder="About Me" row="4" col="10"></textarea>
+                </p>
+                <p>
+                    <select name="" id="">
+                        <optgroup label="India">
+                            <option value="Delhi">Delhi</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Bangladesh">Banglore</option>
+                            <option value="Lucknow">Lucknow</option>
+                            <option value="Patna">Patna</option>
+                        </optgroup>
+                        <optgroup label="UK">
+                            <option value="London">London</option>
+                        </optgroup>
+                        <optgroup label="France">
+                            <option value="Paris">Paris</option>
+                        </optgroup>
+                        <optgroup label="USA">
+                            <option value="Los Angeles">Los Angeles</option>
+                            <option value="San Francisco">San Francisco</option>
+                            <option value="Chicago">Chicago</option>
+                            <option value="Washington DC">Washington DC</option>
+                            <option value="New York">New York</option>
+                        </optgroup>
+                        <optgroup lable="Canada">
+                            <option value="Vancouver">Vancouver</option>
+                            <option value="Toronto">Toronto</option>
+                            <option value="Montreal">Montreal</option>
+                            <option value="Ottawa">Ottawa</option>
+                        </optgroup>
+                        <optgroup label="Russia">
+                            <option value="Moscow">Moscow</option>
+                            <option value="Saint Petersburg">Saint Petersburg</option>
+                            <option value="Novosibirsk">Novosibirsk</option>
+                            <option value="Yekaterinburg">Yekaterinburg</option>
+                            <option value="Nizhny Novgorod">Nizhny Novgorod</option>
+                        </optgroup>
+                        <optgroup label="Japan">
+                            <option value="Tokyo">Tokyo</option>
+                            <option value="Osaka">Osaka</option>
+                            <option value="Kyoto">Kyoto</option>
+                            <option value="Nagoya">Nagoya</option>
+                            <option value="Hiroshima">Hiroshima</option>
+                        </optgroup>
+                    </select>
+                </p>
+                <p>
+                    <label for="rememberMe">Remember Me</label>
+                    <input type="checkbox" name="rememberMe" id="rememberMe"/>
+                </p>
+                <p>
+                    <input list="country"/>
+                    <!-- datalist tag won't display on it's own we nee the above input tag for it -->
+                    <datalist id="country">
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                        <option value="UK">UK</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Russia">Russia</option>
+                        <option value="Japan">Japan</option>
+                    </datalist>
+                </p>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </form>
+        </fieldset>
     <script></script>
 </body>
 </html>
