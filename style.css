@@ -17,7 +17,7 @@ body{
     align-items: center;
 }
 .content{
-    padding:5rem;
+    padding:2rem;
     display: flex;
     flex-direction: column;
     width: 90vw;

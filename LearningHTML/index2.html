@@ -10,7 +10,7 @@
     <!-- <meta http-equiv="refresh" content="30" data-comment="Meta tag to refresh the page every 30 seconds"/> -->
     <!-- <meta name="language" content="en-Us" data-comment="Same as lang attribute in html tag (lang attribute is more preffered)"/> -->
     
-    <title>Learning HTML</title>
+    <title>Form Tags</title>
     
     <!-- Base URL setup for Angular Only -->
     <!-- <base href="/MyReader/" data-comment="Set base URL for Angular app deployed under /MyReader/ path on GitHub Pages"/>  -->
@@ -149,11 +149,35 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" data-comment="pakage: npm install @fortawesome/fontawesome-free,module:import '@fortawesome/fontawesome-free/css/all.min.css';"/> -->
 </head>
 <body>
-    <h1>Learning HTML</h1>
-    <ol>
-        <li><a href="./index1.html">Introduction to HTML and Basic Tags</a></li>
-        <li><a href="./index2.html">Form Tags</a></li>
-    </ol>
+    <style>
+        #form1{
+            display: flex;
+            flex-direction: column;
+            border: solid 1px gray;
+            border-radius: 10px;
+            padding:10px;
+            margin: 10px;
+            row-gap: 10px;
+        }
+        input {
+            width: fit-content;}
+    </style>
+    <fieldset>
+        <legend>Login Form</legend>
+        <h1>Form Tags</h1>
+        <form action="#" method="POST" id="form1">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Your Name" required autofocus minlength="2"/>
+            <label for="role">Role:</label>
+            <input type="text" name="role" id="role" placeholder="Your Role" value="User" size="10" readonly disabled/>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="abc@xyz.com" required/>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Enter Password" required/>
+            <button type="submit">Submit</button>
+            <input type="submit" value="Submit"/>
+        </form>
+    </fieldset>
     <script></script>
 </body>
 </html>
