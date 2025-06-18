@@ -1,43 +1,37 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
-    <meta charset="UTF-8" data-comment="Specifies the character encoding" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" data-comment="For IE compatibility" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"
-        data-comment="Configures viewpoint for responsive design" />
-    <meta name="mobile-web-app-capable" content="yes"
-        data-comment="Behave more like a native iOS app when added to the home screen" />
-    <meta name="theme-color" content="#ccccc7"
-        data-comment="Used by Chrome, Firefox OS, and opera to change the browser address bar" />
-    <meta name="msapplication-TileColor" content="#00aba9"
-        data-comment="Used by windows 8, 8.1, and 10 for the start menu tiles" />
+    <meta charset="UTF-8" data-comment="Specifies the character encoding"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" data-comment="For IE compatibility"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" data-comment="Configures viewpoint for responsive design"/>
+    <meta name="mobile-web-app-capable" content="yes" data-comment="Behave more like a native iOS app when added to the home screen"/>
+    <meta name="theme-color" content="#ccccc7" data-comment="Used by Chrome, Firefox OS, and opera to change the browser address bar"/>
+    <meta name="msapplication-TileColor" content="#00aba9" data-comment="Used by windows 8, 8.1, and 10 for the start menu tiles"/>
     <!-- <meta http-equiv="refresh" content="30" data-comment="Meta tag to refresh the page every 30 seconds"/> -->
     <!-- <meta name="language" content="en-Us" data-comment="Same as lang attribute in html tag (lang attribute is more preffered)"/> -->
-
-    <title>Document</title>
-
+    
+    <title>Learning CSS</title>
+    
     <!-- Base URL setup for Angular Only -->
     <!-- <base href="/MyReader/" data-comment="Set base URL for Angular app deployed under /MyReader/ path on GitHub Pages"/>  -->
-
+    
     <!-- Custom CSS & JS files-->
-    <link rel="stylesheet" href="style.css" data-comment="Custom Stylesheets" />
+    <!-- <link rel="stylesheet" href="style.css" data-comment="Custom Stylesheets"/> -->
     <!-- <script src="app.js" defer data-comment=" Custom JavaScript"></script> -->
-
+    
     <!-- Favicon -->
     <!-- <link rel="icon" href="image.png" type="image/x-icon" data-comment="Favicon to target older browsers like IE 10 and lower"/> -->
     <!-- <link rel="apple-touch-icon" href="image.png" data-comment="Favicon for Apple users"/> -->
     <!-- <link rel="mask-icon" href="image.png" color="#193860" data-comment="Favicon for Safari pinned tabs"/> -->
-
+    
     <!-- SEO Meta Tags -->
-    <meta name="author" content="Piyush Anand" data-comment="Author of Web Page" />
+    <meta name="author" content="Piyush Anand" data-comment="Author of Web Page"/>
     <!-- <meta name="description" content="write description here" data-comment="Description of web page for SEO (160 characters with 1-2 keywords recommended)"/> -->
     <!-- <meta name="keywords" content="keyword1, keyword2, keyword x " data-comment="Keywords of web page for SEO"/> -->
     <!-- <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self';" data-comment="Prevents from being embedded in an iframe to avoid clickjacking attacks"/>-->
     <!-- <meta name="robots" content="noindex, nofollow" data-comment="To tell crawlers not to crawl in this page"/> -->
     <!-- <link rel="manifest" href="manifest.json" data-comment="For SEO and Progressive Web Apps"/> -->
-    <link rel="canonical" href="main link of site"
-        data-comment="tells the main link of site avoiding multiple ranking of sublinks" />
+    <link rel="canonical" href="main link of site" data-comment="tells the main link of site avoiding multiple ranking of sublinks"/>
     <!-- <meta name="google-site-verification" content="verification_code" data-comment="For Google Search Console"/> -->
     <!-- <meta name="msvalidate.01" content="verification_code" data-comment="For Bing Webmaster Tools"/> -->
     <!-- <meta name="yandex-verification" content="verification_code" data-comment="For Yandex Webmaster Tools"/> -->
@@ -47,10 +41,10 @@
     <!-- <meta name="wot-verification" content="verification_code" data-comment="For Web of Trust"/> -->
     <!-- <meta name="pinterest" content="nopin" data-comment="For Pinterest to avoid pinning"/> -->
     <!-- <meta name="pinterest" content="nohover" data-comment="For Pinterest to avoid hover"/> -->
-
+    
     <!-- SEO Multilingual Versions Tags -->
     <!-- <link rel="alternate" hreflang="en(main_Language_code)" href="URL_of_main_site"/> -->
-
+    
     <!-- OpenGraph Meta Tags - For Social Media Previews -->
     <!-- 
     <meta property="og:title" content="title of your webpage"/>
@@ -128,14 +122,14 @@
     <meta property="og:locale:alternate" content="en_NZ" data-comment="here English(New Zealand)"/>
     <meta property="og:locale:alternate" content="en_CA" data-comment="here English(Canada)"/>
     <meta property="og:locale:alternate" content="en_IE" data-comment="here English(Ireland)"/>
-    -->
-
+    --> 
+    
     <!-- Twitter Meta Tags - For Twitter Previews -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Website Title" />
-    <meta name="twitter:description" content="Short description of web page" />
-    <meta name="twitter:image" content="preview image url" />
-
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Website Title"/>
+    <meta name="twitter:description" content="Short description of web page"/>
+    <meta name="twitter:image" content="preview image url"/>
+    
     <!-- CDNs -->
     <!-- Tailwind CSS via CDN -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.13/base.min.css" rel="stylesheet"/> -->
@@ -154,39 +148,9 @@
     <!-- CDN font-awesome -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" data-comment="pakage: npm install @fortawesome/fontawesome-free,module:import '@fortawesome/fontawesome-free/css/all.min.css';"/> -->
 </head>
-
 <body>
-    <div class="top">
-        <h1>Piyush</h1>
-        <a href="./MyPortfolio/index.html">My Portfolio</a>
-    </div>
-    <div class="content">
-        <div>
-            <h3>Learning:</h3>
-            <hr />
-            <ol>
-                <li><a href="./LearningHTML/index.html">HTML</a></li>
-                <li><a href="./LearningCSS/index.html">CSS</a></li>
-                <li><a href="./LearningJS/index.html">JS</a></li>
-            </ol>
-        </div>
-        <div>
-            <h3>My Projects:</h3>
-            <hr />
-            <ol>
-                <li><a href="./P-1/index.html">Project 1</a></li>
-                <li><a href="./P-2/index.html">Project 2</a></li>
-            </ol>
-        </div>
-        <div>
-            <h3>Assignments:</h3>
-            <hr />
-            <ol>
-                <li><a href="./A-1/index.html">Assingment 1</a></li>
-                <li><a href="./A-2/index.html">Assingment 2</a></li>
-            </ol>
-        </div>
-    </div>
+    <h1>Learning CSS</h1>
+    
     <script></script>
 </body>
 </html>
