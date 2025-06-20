@@ -1,0 +1,19 @@
+~> Created by Brendan Eich in 1995
+~> JavaScript was developed by Netscape.
+
+~> There was a rival of JavaScript named VBScript (for Internet Explorer as it's Browser)
+~> Javascript supports all browser, VBScript supports only IE browser
+
+~> JavaScript code is inserted between <script> and </script> tags.
+~> Or we can link external Javascript file in HTML <script src="relative_path_of_file"></script>
+
+~> Using defer attribute:
+    It's done to load JavaScript after HTML is fully loaded.
+    <script src="path_of_file" defer></script>
+
+~> Run the file using command:
+    node pathOfFile_or_fileName.js
+
+~> Comments:
+    // Single line Comments
+    /* Multi Line Comments */
