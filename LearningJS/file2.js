@@ -1,4 +1,14 @@
 // Operators
+let a1="10";
+let a2=10;
+console.log(a1+a2) // String concatenation
+console.log(a1*a2) // automatically understands it's mathematical oprational logic and treats it as number
+console.log(a1-a2) // String to number conversion
+console.log(a1==a2) // Loose equality check (value only, not type)
+console.log(a1===a2) // Strict equality check (type and value)
+console.log(a1!=a2) // Loose inequality check
+console.log(a1!==a2) // Strict inequality check
+
 // Comparison Operators
 console.log(a1<a2) // Less than
 console.log(a1>a2) // Greater than

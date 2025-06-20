@@ -148,15 +148,58 @@
     <!-- CDN font-awesome -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" data-comment="pakage: npm install @fortawesome/fontawesome-free,module:import '@fortawesome/fontawesome-free/css/all.min.css';"/> -->
 </head>
-<body id="root">
+<body>
     <h1>Learning JS</h1>
+    <a href="./Notes.txt">Notes</a>
     <ol>
         <li><a href="#" onclick="loadScript('file1.js')">Introduction to JavaScript</a></li>
         <li><a href="#" onclick="loadScript('file2.js')">Operators in JavaScript</a></li>
+        <li><a href="#" onclick="loadScript('file3.js')">Conditionals in JavaScript</a></li>
+        <li><a href="#" onclick="loadScript('file4.js')">Loops in JavaScript</a></li>
+        <li><a href="#" onclick="loadScript('file5.js')">Funcitons in JavaScript</a></li>
+        <li><a href="#" onclick="loadScript('file5a.js')">Funcitonal Fundamentals in JavaScript</a></li>
+        <li><a href="#" onclick="loadScript('file5b.js')">Arrow Funcitons in JavaScript</a></li>
+        <li><a href="#" onclick="loadScript('file5c.js')">Callback Funcitons in JavaScript</a></li>
     </ol>
 
+    <pre id="code"></pre>
     <pre id="output"></pre>
 
-    <script></script>
+    <script>
+        const realConsoleLog = console.log;
+        let logOutput = [];
+
+        console.log = (...args) => {
+            logOutput.push(args.join(" "));
+            realConsoleLog(...args);
+        };
+
+        async function loadScript(fileName) {
+        document.getElementById('code').textContent = '';
+        document.getElementById('output').textContent = '⏳ Loading script...';
+        logOutput = [];
+
+        const basePath = window.location.pathname.replace(/\/[^\/]*$/, '/');
+        const fullUrl = basePath + fileName;
+        console.log("🔗 Trying to fetch:", fullUrl);
+
+        try {
+            const response = await fetch(fullUrl);
+            console.log("📶 Response status:", response.status);
+            if (!response.ok) {
+                throw new Error(`fetch error: ${response.status}`);
+            }
+
+            const code = await response.text();
+            document.getElementById('code').textContent = code;
+
+            new Function(code)();
+            document.getElementById('output').textContent = logOutput.join('\n') || '[No output]';
+
+            } catch (err) {
+                document.getElementById('output').textContent = `❌ Failed loading "${fullUrl}"\nError: ${err.message}`;
+            }
+        }
+    </script>
 </body>
 </html>
