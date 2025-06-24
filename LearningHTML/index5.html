@@ -10,7 +10,7 @@
     <!-- <meta http-equiv="refresh" content="30" data-comment="Meta tag to refresh the page every 30 seconds"/> -->
     <!-- <meta name="language" content="en-Us" data-comment="Same as lang attribute in html tag (lang attribute is more preffered)"/> -->
     
-    <title>Multimedia and Hyperlinks</title>
+    <title>External Links and iframe</title>
     
     <!-- Base URL setup for Angular Only -->
     <!-- <base href="/MyReader/" data-comment="Set base URL for Angular app deployed under /MyReader/ path on GitHub Pages"/>  -->
@@ -149,65 +149,27 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" data-comment="pakage: npm install @fortawesome/fontawesome-free,module:import '@fortawesome/fontawesome-free/css/all.min.css';"/> -->
 </head>
 <body>
-    <h1>Multimedia and Hyperlinks</h1>
-    <div id="menu">
-        <a href="#imagesSection">Images Section</a>
-        <a href="#audioSection">Audio Section</a>
-        <a href="#videoSection">Video Section</a>
-        <a href="#iframeSection">Iframe Section</a>
-        <a href="#hyperlinksSection">Hyperlinks Section</a>
-    </div>
+    <h1>External Links and iframe</h1>
+    <!-- Opens index1.html in the current tab (default behavior) -->
+    <a href="index1.html">View Index1 in current tab</a><br/>
 
-    <!-- Image -->
-    <h3 id="imagesSection">Images</h3>
-    <img src="./WallpaperDog-20494011.jpg" width="500px" alt="Staff" />
-    <figure>
-        <img src="./WallpaperDog-20496501.jpg" width="500px" alt="Staff" />
-        <figcaption>Preparing for the AGM</figcaption>
-    </figure>
+    <!-- Explicitly opens in the same tab -->
+    <a href="index1.html" target="_self">View Index1 in the same page (same as default)</a><br/>
 
-    <!-- Audio -->
-    <h2 id="audioSection">Audio Playlist:</h2>
-    <p><a href="#menu"> Go Up</a></p>
-    <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+    <!-- Opens in the full body of the window (useful when inside iframes) -->
+    <a href="index1.html" target="_top">View Index1 in top-level page</a><br/>
+
+    <!-- Opens in a new browser tab or window -->
+    <a href="index1.html" target="_blank">View Index1 in new tab</a><br/>
+
+    <!-- Opens inside the iframe named "frm" -->
+    <a href="index1.html" target="frm">View Index1 in iframe below</a>
 
     <hr/>
-    <!-- Video -->
-    <h2 id="audioSection">Video Playlist:</h2>
-    <p><a href="#menu"> Go Up</a></p>
-    <video controls height="200px" width="300px">
-        <source src="Breathtaking masterpiece 😮_💨❤️ - Shadow vs Elizabeth - The Eminence in Shadow Season 2.mp4" type="video/mp4"/>
-        Your browser does not support the video tag.
-    </video>
-    <video controls autoplay loop muted height="200px" width="300px">
-        <source src="Breathtaking masterpiece 😮_💨❤️ - Shadow vs Elizabeth - The Eminence in Shadow Season 2.mp4" type="video/mp4"/>
-        <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English"/>
-        <track src="subtitles2.vtt" kind="subtitles" srclang="hi" label="Hindi"/>
-        Your browser does not support the video tag.
-    </video>
-    <video src=""></video>
-    <!-- iframes -->
-    <h2 id="iframeSection">Iframes</h2>
-    <!-- Hyperlinks -->
-    <h2 id="hyperlinksSection">Hyperlinks</h2>
-    <a href="https://www.google.co.in" title="Google">Google</a>
-    <a href="tel:+910000000000">Call</a>
-    <a href="sms:+910000000000">Message</a>
+
+    <!-- Iframe named "frm" for loading link into it -->
+    <iframe name="frm" width="600" height="400"></iframe>
+
     <script></script>
 </body>
 </html>

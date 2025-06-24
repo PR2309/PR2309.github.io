@@ -149,22 +149,98 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" data-comment="pakage: npm install @fortawesome/fontawesome-free,module:import '@fortawesome/fontawesome-free/css/all.min.css';"/> -->
 </head>
 <body>
-    <h1>Learning JS</h1>
-    <a href="./Notes.txt">Notes</a>
+    <div class="header">
+        <h1>Learning JS</h1>
+        <div>
+            <a href="./Notes.txt" class="notes-btn">Notes</a>
+            <a href="#" onclick="location.reload()" class="refresh-button">Refresh</a>
+        </div>
+    </div>
+
     <ol>
         <li><a href="#" onclick="loadScript('file1.js')">Introduction to JavaScript</a></li>
         <li><a href="#" onclick="loadScript('file2.js')">Operators in JavaScript</a></li>
         <li><a href="#" onclick="loadScript('file3.js')">Conditionals in JavaScript</a></li>
         <li><a href="#" onclick="loadScript('file4.js')">Loops in JavaScript</a></li>
-        <li><a href="#" onclick="loadScript('file5.js')">Funcitons in JavaScript</a></li>
-        <li><a href="#" onclick="loadScript('file5a.js')">Funcitonal Fundamentals in JavaScript</a></li>
-        <li><a href="#" onclick="loadScript('file5b.js')">Arrow Funcitons in JavaScript</a></li>
-        <li><a href="#" onclick="loadScript('file5c.js')">Callback Funcitons in JavaScript</a></li>
+        <li><a href="#" onclick="loadScript('file5.js')">Functions in JavaScript</a></li>
+        <li><a href="#" onclick="loadScript('file6.js')">Arrow Functions in JavaScript</a></li>
+        <li><a href="#" onclick="loadScript('file7.js')">Callback Functions in JavaScript</a></li>
+        <li><a href="#" onclick="loadScript('file8.js')">Objects in JavaScript</a></li>
+        <li><a href="#" onclick="loadScript('file9.js')">Arrays Methods in JavaScript</a></li>
+        <li><a href="#" onclick="loadScript('file9a.js')">ForEach and Map Methods in JavaScript</a></li>
+        <li><a href="#" onclick="loadScript('file10.js')">Shopping App in JavaScript</a></li>
+        <li><a href="#" onclick="loadScript('file11.js')">Import/Export in JavaScript</a></li>
+        <li><a href="#" onclick="loadScript('file12.js')">Var, Let and Const in JavaScript</a></li>
+        <li><a href="#" onclick="loadScript('file13.js')">Spread Operator in JavaScript</a></li>
+        <li><a href="#" onclick="loadScript('file14.js')">Error Handling in JavaScript</a></li>
+        <li><a href="#" onclick="loadScript('file15.js')">JavaScript Object Notation (JSON)</a></li>
+        <li><a href="#" onclick="loadScript('file16.js')">Promises, Fetch Method and Async-Await</a></li>
+        <!-- <li><a href="#" onclick="loadScript('file16a.js')">Timing and scheduling in JavaScript</a></li> -->
+        <li><a href="#" onclick="loadScript('file17.js')">Clouser Functions</a></li>
+        <li><a href="#" onclick="loadScript('filex.js')">Console Methods</a></li>
+        <li><a href="./file18.html">Accessing HTML Values</a></li>
+        <li><a href="./file19.html">Data Handling in HTML Values</a></li>
+
     </ol>
+    <div>
+        <pre id="code"></pre>
+        <pre id="output"></pre>
+    </div>
 
-    <pre id="code"></pre>
-    <pre id="output"></pre>
-
+    <style>
+        html, body{
+            padding: 0;
+            margin: 0;
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .header>div{
+            padding: 2rem 1rem;
+        }
+        .notes-btn{
+            text-decoration: none;
+            color: white;
+            background-image: linear-gradient(rgb(22, 183, 119), rgb(102, 216, 170));
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+        .refresh-button{
+            text-decoration: none;
+            color: white;
+            background-image: linear-gradient(rgb(28, 106, 215), rgb(133, 179, 244));
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .refresh-button:hover{
+            color: cyan;
+            background-image: linear-gradient(rgb(133, 179, 244),rgb(28, 106, 215));
+        }
+        .notes-btn:hover{
+            color: rgb(0, 255, 255);
+            background-image: linear-gradient(rgb(102, 216, 170),rgb(22, 183, 119));
+        }
+        
+        pre.code, pre.output {
+            padding: 0.5rem;
+            border: solid grey 2px;
+            text-wrap: break-word;
+            white-space: pre-wrap;
+            background-image: linear-gradient(45deg, white, grey,white);
+        }
+        pre.code{
+            margin: 1rem 1rem 0rem 1rem;
+            border-radius: 20px 20px 0px 0px;
+        }
+        pre.output{
+            margin: 0rem 1rem 1rem 1rem;
+            border-radius: 0px 0px 20px 20px;
+        }
+    </style>
     <script>
         const realConsoleLog = console.log;
         let logOutput = [];
@@ -177,6 +253,8 @@
         async function loadScript(fileName) {
         document.getElementById('code').textContent = '';
         document.getElementById('output').textContent = '⏳ Loading script...';
+        document.getElementById("code").className = "";
+        document.getElementById("output").className = "";
         logOutput = [];
 
         const basePath = window.location.pathname.replace(/\/[^\/]*$/, '/');
@@ -191,13 +269,16 @@
             }
 
             const code = await response.text();
-            document.getElementById('code').textContent = code;
+            document.getElementById("code").classList.add("code");
+            document.getElementById('code').textContent = "// CODE:\n\n"+code;
 
             new Function(code)();
-            document.getElementById('output').textContent = logOutput.join('\n') || '[No output]';
-
-            } catch (err) {
-                document.getElementById('output').textContent = `❌ Failed loading "${fullUrl}"\nError: ${err.message}`;
+            document.getElementById("output").classList.add("output");
+            document.getElementById('output').textContent = "// OUTPUT:\n\n"+(logOutput.join('\n') || '[No output]');
+            
+        } catch (err) {
+                document.getElementById("output").classList.add("output");
+                document.getElementById('output').textContent = `// OUTPUT:\n\n❌ Failed loading "${fullUrl}"\nError: ${err.message}`;
             }
         }
     </script>

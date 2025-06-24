@@ -32,3 +32,8 @@ greetArrow("John"); // This will log "Hello John"
 let greetWithDefault = (student = "Guest") => console.log(`Hello ${student}`); // This is an arrow function with a default parameter
 greetWithDefault(); // This will log "Hello Guest"
 greetWithDefault("Alice"); // This will log "Hello Alice"
+
+const addWithSpread = (...args) => {
+    return args.reduce((sum, current) => sum + current, 0); // This function returns the sum of all arguments passed to it
+}
+console.log(addWithSpread(1, 2, 3, 4, 5)); // This will log 15

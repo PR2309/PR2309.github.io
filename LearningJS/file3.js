@@ -24,7 +24,8 @@ if(d) console.log("Good"); // This will not execute because d is null
 else console.log("Bad"); // This will execute
 
 // Ternary operator
-// The ternary operator is a shorthand for if-else statements. It takes three operands: a condition, a result if true, and a result if false.
+// The ternary operator is a shorthand for if-else statements.
+// It takes three operands: a condition, a result if true, and a result if false.
 a>b?console.log("a is greater than b"):console.log("a is less than or equal to b");
 console.log(`${a} is ${a>b?"greater than":"less than"} to ${b}`);
 console.log(`${a>b?"a is greater than b":"a is less than or equal to b"}`);
@@ -38,7 +39,7 @@ a<b || console.log("a is not less than b"); // This will execute if a is not les
 // This is useful for setting default values when a variable might be undefined or null.
 let x
 let value=a||10
-console.log(value); // If a is truthy, value will be a; otherwise, it will be 10
+console.log(value); // If a is truthy not equal to 0, value will be a; otherwise, it will be 10
 // The nullish coalescing operator (??) can be used to provide a default value if the left-hand side is null or undefined.
 let e = null;
 let f = e ?? "default value"; // If e is null or undefined, f will be "default value"

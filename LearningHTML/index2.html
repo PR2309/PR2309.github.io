@@ -184,6 +184,148 @@
             <input type="submit" value="Submit"/>
         </form>
         <fieldset>
+            <legend>Input Types</legend>
+            <form action="#" method="POST" id="inputTypes">
+                <p>
+                    <label for="textVal">Text Type:</label>
+                    <input type="text" name="textVal" id="textVal" placeholder="Text Value" required autofocus/>
+                </p>
+
+                <p>
+                    <label for="emailVal">Email Type:</label>
+                    <input type="email" name="emailVal" id="emailVal" placeholder="Email Value" required/>
+                </p>
+
+                <p>
+                    <label for="passwordVal">Password Type:</label>
+                    <input type="password" name="passwordVal" id="passwordVal" placeholder="Password Value" required/>
+                </p>
+
+                <p>
+                    <label for="numberVal">Number Type:</label>
+                    <input type="number" name="numberVal" id="numberVal" placeholder="Number Value" required/>
+                </p>
+
+                <p>
+                    <label for="telVal">Tel Type:</label>
+                    <input type="tel" name="telVal" id="telVal" placeholder="Tel Value" required/>
+                </p>
+
+                <p>
+                    <label for="telVal">Url Type:</label>
+                    <input type="url" name="urlVal" id="urlVal" placeholder="Url Value" required/>
+                </p>
+
+                <p>
+                    <label for="telVal">Url Type:</label>
+                    <input type="url" name="urlVal" id="urlVal" placeholder="Url Value" required/>
+                </p>
+
+                <p>
+                    <label for="searchVal">Search Type:</label>
+                    <input type="search" name="searchVal" id="searchVal" placeholder="Search Value" required/>
+                </p>
+
+                <p>
+                    <label for="dateVal">Date Type:</label>
+                    <input type="date" name="dateVal" id="dateVal" placeholder="Date Value" required/>
+                </p>
+
+                <p>
+                    <label for="timeVal">Time Type:</label>
+                    <input type="time" name="timeVal" id="timeVal" placeholder="Time Value" required/>
+                </p>
+
+                <p>
+                    <label for="datetime-localVal">Datetime-local Type:</label>
+                    <input type="datetime-local" name="datetime-localVal" id="datetime-localVal" placeholder="Datetime-local Value" required/>
+                </p>
+
+                <p>
+                    <label for="monthVal">Month Type:</label>
+                    <input type="month" name="monthVal" id="monthVal" placeholder="Month Value" required/>
+                </p>
+
+                <p>
+                    <label for="weekVal">Week Type:</label>
+                    <input type="week" name="weekVal" id="weekVal" placeholder="Week Value" required/>
+                </p>
+
+                <p>
+                    <label for="checkboxVal">Checkbox Type:</label>
+                    <input type="checkbox" name="checkboxVal" id="checkboxVal" placeholder="Checkbox Value" required/>
+                </p>
+
+                <p>
+                    <label for="radioVal">Radio Type:</label>
+                    <input type="radio" name="radioVal" id="radioVal" placeholder="Radio Value" required/>
+                    <input type="radio" name="radioVal1" id="radioVal1" placeholder="Radio Value 1" required/>
+                    <input type="radio" name="radioVal1" id="radioVal1" placeholder="Radio Value 1" required/>
+                </p>
+
+                <p>
+                    <label for="rangeVal">Range Type:</label>
+                    <input type="range" name="rangeVal" id="checkboxVal" placeholder="Range Value" required/>
+                </p>
+
+                <p>
+                    <label for="fileVal">File Type:</label>
+                    <input type="file" name="fileVal" id="fileVal" placeholder="File Value" required/>
+                </p>
+
+                <p>
+                    <label for="hiddenVal">Hidden Type:</label>
+                    <input type="hidden" name="hiddenVal" id="hiddenVal" placeholder="Hidden Value" required/>
+                </p>
+
+
+                <p>
+                    <label for="colorVal">Color Type:</label>
+                    <input type="color" name="colorVal" id="colorVal" placeholder="Color Value" required/>
+                </p>
+
+                <p>
+                    <label for="buttonVal">Button Type:</label>
+                    <input type="button" name="buttonVal" value="Button" id="buttonVal" placeholder="Button Value" required/>
+                </p>
+
+                <p>
+                    <label for="submitVal">Submit Type:</label>
+                    <input type="submit" name="submitVal" value="Submit" id="submitVal" placeholder="Submit Value" required/>
+                </p>
+
+                <p>
+                    <label for="resetVal">Reset Type:</label>
+                    <input type="reset" name="resetVal" id="resetVal" placeholder="Reset Value" required/>
+                </p>
+                <hr/>
+                <h3>Input Attributes:</h3>
+                <pre>
+                    Attribute	    Description
+                    type	        Type of input (text, email, checkbox, etc.)
+                    id	            Unique identifier for JavaScript and CSS
+                    name	        Name of the input (used in form submissions)
+                    value	        Default value of the input
+                    placeholder 	Temporary hint text inside the input
+                    required	    Makes the field mandatory
+                    disabled	    Disables the input (non-editable)
+                    readonly	    Input is readable but not editable
+                    checked	        For checkbox and radio, pre-checks the input
+                    min / max	    For number, range, date, etc. — sets limits
+                    step	        Step size for number, range, date, etc.
+                    pattern	        Regex pattern for custom validation
+                    maxlength	    Maximum number of characters
+                    minlength	    Minimum number of characters
+                    autofocus	    Automatically focuses on this input when page loads
+                    autocomplete	Enables or disables browser autocomplete
+                    multiple	    Allows multiple files (file) or multiple emails (email)
+                    form	        Links input to a specific form (by form id)
+                    accept	        For file input: restricts accepted file types
+                    list	        Links input to a &lt;&NoBreak;datalist&NoBreak;&gt; for auto-suggestions
+                </pre>
+            </form>
+        </fieldset>
+        <fieldset>
             <legend>Login Form</legend>
             <form action="#" method="POST" id="loginForm">
                 <label for="name">Name:</label>
@@ -319,6 +461,10 @@
                         <option value="Russia">Russia</option>
                         <option value="Japan">Japan</option>
                     </datalist>
+                </p>
+                <p>
+                    <input type="submit" value="Submit"/> <!-- Work specifically as a submit button for form and prevents default submission of form -->
+                    <input type="button" value="Submit"/> <!-- Just work as button but not submit and won't prevent default submission of form -->
                 </p>
                 <button type="submit">Submit</button>
                 <button type="reset">Reset</button>

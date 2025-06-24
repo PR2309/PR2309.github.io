@@ -17,3 +17,13 @@
 ~> Comments:
     // Single line Comments
     /* Multi Line Comments */
+
+
+~> .mjs files are modules and won't run on it's own but help other files to run by storing their logic separately for better maintainance.
+~> if it's not working
+            change all connected files from .js to .mjs
+    (OR)    inside the folder write command:
+                npm init -y
+            in package.json below "name" add:
+                "type":"module", 
+    

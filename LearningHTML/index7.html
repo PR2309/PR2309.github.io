@@ -10,7 +10,7 @@
     <!-- <meta http-equiv="refresh" content="30" data-comment="Meta tag to refresh the page every 30 seconds"/> -->
     <!-- <meta name="language" content="en-Us" data-comment="Same as lang attribute in html tag (lang attribute is more preffered)"/> -->
     
-    <title>Multimedia and Hyperlinks</title>
+    <title>List and Table</title>
     
     <!-- Base URL setup for Angular Only -->
     <!-- <base href="/MyReader/" data-comment="Set base URL for Angular app deployed under /MyReader/ path on GitHub Pages"/>  -->
@@ -149,65 +149,59 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" data-comment="pakage: npm install @fortawesome/fontawesome-free,module:import '@fortawesome/fontawesome-free/css/all.min.css';"/> -->
 </head>
 <body>
-    <h1>Multimedia and Hyperlinks</h1>
-    <div id="menu">
-        <a href="#imagesSection">Images Section</a>
-        <a href="#audioSection">Audio Section</a>
-        <a href="#videoSection">Video Section</a>
-        <a href="#iframeSection">Iframe Section</a>
-        <a href="#hyperlinksSection">Hyperlinks Section</a>
-    </div>
+    <h1>List and Table</h1>
 
-    <!-- Image -->
-    <h3 id="imagesSection">Images</h3>
-    <img src="./WallpaperDog-20494011.jpg" width="500px" alt="Staff" />
-    <figure>
-        <img src="./WallpaperDog-20496501.jpg" width="500px" alt="Staff" />
-        <figcaption>Preparing for the AGM</figcaption>
-    </figure>
+    <!-- Lists -->
+    <!-- Ordered List -->
+    <ol>
+        <li>C++</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>Nodejs</li>
+    </ol>
+    <!-- Unordered List -->
+    <ul>
+        <li>C++</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>Nodejs</li>
+    </ul>
+    <!-- Description List -->
+    <dl>
+        <dt>Courses</dt>
+        <dd>Java Full Stack Course</dd>
+        <dd>Python Full Stack Course</dd>
+        <dd>MERN Stack Course</dd>
+        <dt>Timing</dt>
+        <dd>Moring Batch</dd>
+        <dd>Evening Batch</dd>
+    </dl>
 
-    <!-- Audio -->
-    <h2 id="audioSection">Audio Playlist:</h2>
-    <p><a href="#menu"> Go Up</a></p>
-    <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
 
-    <hr/>
-    <!-- Video -->
-    <h2 id="audioSection">Video Playlist:</h2>
-    <p><a href="#menu"> Go Up</a></p>
-    <video controls height="200px" width="300px">
-        <source src="Breathtaking masterpiece 😮_💨❤️ - Shadow vs Elizabeth - The Eminence in Shadow Season 2.mp4" type="video/mp4"/>
-        Your browser does not support the video tag.
-    </video>
-    <video controls autoplay loop muted height="200px" width="300px">
-        <source src="Breathtaking masterpiece 😮_💨❤️ - Shadow vs Elizabeth - The Eminence in Shadow Season 2.mp4" type="video/mp4"/>
-        <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English"/>
-        <track src="subtitles2.vtt" kind="subtitles" srclang="hi" label="Hindi"/>
-        Your browser does not support the video tag.
-    </video>
-    <video src=""></video>
-    <!-- iframes -->
-    <h2 id="iframeSection">Iframes</h2>
-    <!-- Hyperlinks -->
-    <h2 id="hyperlinksSection">Hyperlinks</h2>
-    <a href="https://www.google.co.in" title="Google">Google</a>
-    <a href="tel:+910000000000">Call</a>
-    <a href="sms:+910000000000">Message</a>
+    <!-- Tables -->
+    <table border="1">
+        <caption>Report Card</caption>
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Maths</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td>90</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td>Total</td>
+            <td>185</td>
+        </tfoot>
+    </table>
     <script></script>
 </body>
 </html>

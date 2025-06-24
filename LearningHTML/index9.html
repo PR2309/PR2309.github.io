@@ -10,7 +10,7 @@
     <!-- <meta http-equiv="refresh" content="30" data-comment="Meta tag to refresh the page every 30 seconds"/> -->
     <!-- <meta name="language" content="en-Us" data-comment="Same as lang attribute in html tag (lang attribute is more preffered)"/> -->
     
-    <title>Multimedia and Hyperlinks</title>
+    <title>Map Tags</title>
     
     <!-- Base URL setup for Angular Only -->
     <!-- <base href="/MyReader/" data-comment="Set base URL for Angular app deployed under /MyReader/ path on GitHub Pages"/>  -->
@@ -149,65 +149,44 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" data-comment="pakage: npm install @fortawesome/fontawesome-free,module:import '@fortawesome/fontawesome-free/css/all.min.css';"/> -->
 </head>
 <body>
-    <h1>Multimedia and Hyperlinks</h1>
-    <div id="menu">
-        <a href="#imagesSection">Images Section</a>
-        <a href="#audioSection">Audio Section</a>
-        <a href="#videoSection">Video Section</a>
-        <a href="#iframeSection">Iframe Section</a>
-        <a href="#hyperlinksSection">Hyperlinks Section</a>
-    </div>
+    <h1>Map Tags</h1>
+    <img src="india.jpg" usemap="#mymap" />
+    <map name="mymap">
+        <area shape="default" href="https://www.wipro.com" />
+        <area shape="rect" coords="278,488,500,500" href="https://www.google.com"
+    /></map>
 
-    <!-- Image -->
-    <h3 id="imagesSection">Images</h3>
-    <img src="./WallpaperDog-20494011.jpg" width="500px" alt="Staff" />
-    <figure>
-        <img src="./WallpaperDog-20496501.jpg" width="500px" alt="Staff" />
-        <figcaption>Preparing for the AGM</figcaption>
-    </figure>
+    <!-- Image with image map -->
+    <!-- usemap: Links the image to a <map> element by name (with # prefix) -->
+    <img src="india.jpg" alt="Map of India" usemap="#mymap" width="600" height="800" />
 
-    <!-- Audio -->
-    <h2 id="audioSection">Audio Playlist:</h2>
-    <p><a href="#menu"> Go Up</a></p>
-    <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+    <!-- Define the image map -->
+    <!-- Purpose: Defines an image map — a list of clickable areas on the image.
+        name: Must match the value used in the usemap attribute of the <img> tag (without #). -->
+    <map name="mymap">
+        <!-- Rectangle area: x1,y1,x2,y2 -->
+        <area shape="rect" coords="278,488,500,500" href="https://www.google.com" alt="Google" target="_blank">
+        <!-- Defines clickable regions within the image map. -->
+        <!-- 
+            Attribute	Description
+            shape	    Defines the shape of the clickable area: rect, circle, poly, or default.
+            coords  	Coordinates of the area (format depends on shape).
+            href	    URL to open when the area is clicked.
+            alt	        Alternative text (important for accessibility).
+            target	    Specifies how to open the link (_blank, _self, _parent, _top).
+        -->
 
-    <hr/>
-    <!-- Video -->
-    <h2 id="audioSection">Video Playlist:</h2>
-    <p><a href="#menu"> Go Up</a></p>
-    <video controls height="200px" width="300px">
-        <source src="Breathtaking masterpiece 😮_💨❤️ - Shadow vs Elizabeth - The Eminence in Shadow Season 2.mp4" type="video/mp4"/>
-        Your browser does not support the video tag.
-    </video>
-    <video controls autoplay loop muted height="200px" width="300px">
-        <source src="Breathtaking masterpiece 😮_💨❤️ - Shadow vs Elizabeth - The Eminence in Shadow Season 2.mp4" type="video/mp4"/>
-        <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English"/>
-        <track src="subtitles2.vtt" kind="subtitles" srclang="hi" label="Hindi"/>
-        Your browser does not support the video tag.
-    </video>
-    <video src=""></video>
-    <!-- iframes -->
-    <h2 id="iframeSection">Iframes</h2>
-    <!-- Hyperlinks -->
-    <h2 id="hyperlinksSection">Hyperlinks</h2>
-    <a href="https://www.google.co.in" title="Google">Google</a>
-    <a href="tel:+910000000000">Call</a>
-    <a href="sms:+910000000000">Message</a>
+
+        <!-- Default area (fallback if no other area is clicked) -->
+        <area shape="default" href="https://www.wipro.com" alt="Wipro" target="_blank">
+        <!-- 
+        shape can be:
+            rect — rectangle (x1,y1,x2,y2)
+            circle — circle (centerX,centerY,radius)
+            poly — polygon (series of x,y pairs)
+            default — entire image if no other region is matched
+        -->
+    </map>
     <script></script>
 </body>
 </html>
