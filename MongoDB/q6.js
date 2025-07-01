@@ -12,3 +12,10 @@ db.employees.dropIndex("email_1")
 // 
 db.employees.find({email:"jonh@gmail.com"}).explain("executionStats")
 
+
+/***************************************************************************/
+db.employees.getIndexes()
+
+db.employees.createIndex({email:1})
+
+db.employees.dropIndex("email_1")

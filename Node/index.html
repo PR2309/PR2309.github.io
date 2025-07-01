@@ -10,7 +10,7 @@
     <!-- <meta http-equiv="refresh" content="30" data-comment="Meta tag to refresh the page every 30 seconds"/> -->
     <!-- <meta name="language" content="en-Us" data-comment="Same as lang attribute in html tag (lang attribute is more preffered)"/> -->
     
-    <title>Learning MongoDB</title>
+    <title>Node Js</title>
     
     <!-- Base URL setup for Angular Only -->
     <!-- <base href="/MyReader/" data-comment="Set base URL for Angular app deployed under /MyReader/ path on GitHub Pages"/>  -->
@@ -149,130 +149,9 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" data-comment="pakage: npm install @fortawesome/fontawesome-free,module:import '@fortawesome/fontawesome-free/css/all.min.css';"/> -->
 </head>
 <body>
-    <div class="header">
-        <h1>Learning MongoDB | <a href="https://github.com/PR2309/PR2309.github.io/tree/main/MongoDB">GH</a></h1>
-        <div class="btns">
-            <a href="#" class="notes-btn" onclick="loadFile('./Notes.txt')">Notes</a>
-            <a href="#" class="commands-btn" onclick="loadFile('./Commands.txt')">Commands</a>
-            <a href="#" class="refresh-button" onclick="location.reload()">Refresh</a></div>
-        </div>
-    </div>
-    <hr/>
-    <div>
-    <h1>Documents</h1>
-    <ul>
-        <li><a href="./mongodb-questions.pdf">MongoDB Questions</a></li>
-        <li><a href="#">MongoDB Notes</a></li>
-    </ul>
-    </div>
-    <ol>
-        <li><a href="#" onclick="loadFile('q1.js')">MongoDB Shell Commands</a></li>
-        <li><a href="#" onclick="loadFile('q2.js')">Insertion Command</a></li>
-        <li><a href="#" onclick="loadFile('q3.js')">Find Command</a></li>
-        <li><a href="#" onclick="loadFile('q4.js')">Conditional Commands</a></li>
-        <li><a href="#" onclick="loadFile('q5.js')">Updation & Deletion Commands</a></li>
-        <li><a href="#" onclick="loadFile('q6.js')">Index Creation Commands</a></li>
-        <li><a href="#" onclick="loadFile('q7.js')">Aggregate, Pipelines and Operators</a></li>
-        <li><a href="#" onclick="loadFile('q8.js')">Operators and View Creation</a></li>
-        <li><a href="#" onclick="loadFile('q8a30052025.js')">Alias, Regex & Quetions</a></li>
-        <li><a href="#" onclick="loadFile('q9.js')">MongoDB Backup & Regex</a></li>
-        <li><a href="#" onclick="loadFile('q10.js')">Replica Set</a></li>
-        <li><a href="#" onclick="loadFile('q11.js')">Transactions & Sessions</a></li>
-        <li><a href="#" onclick="loadFile('q12.js')">Sharding Theory</a></li>
-        <li><a href="#" onclick="loadFile('q13.mjs')">Sharding Enviroment Creation Code</a></li>
-        <li><a href="#" onclick="loadFile('q14.js')">MongoDB Security</a></li>
-    </ol>
-    <div>
-        <pre id="code"></pre>
-        <pre id="output"></pre>
-    </div>
-    <style>
-        html, body {
-            padding: 0;
-            margin: 0;
-        }
-        .header {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding: 10px;
-        }
-        .header > div {
-            padding: 2rem 1rem;
-        }
-        .btns{
-            display: flex;
-            flex-direction: inherit;
-            justify-content: space-between;
-        }
-        .notes-btn {
-            text-decoration: none;
-            color: white;
-            background-image: linear-gradient(rgb(22, 183, 119), rgb(102, 216, 170));
-            padding: 10px 20px;
-            border-radius: 10px;
-            margin-right: 10px;
-        }
-        .refresh-button {
-            text-decoration: none;
-            color: white;
-            background-image: linear-gradient(rgb(28, 106, 215), rgb(133, 179, 244));
-            padding: 10px 20px;
-            border-radius: 10px;
-        }
-        .commands-btn {
-            text-decoration: none;
-            color: white;
-            background-image: linear-gradient(rgb(0, 0, 0), rgb(84, 84, 84));
-            padding: 10px 20px;
-            border-radius: 10px;
-            margin-right: 10px;
-        }
-        .notes-btn:hover {
-            color: rgb(0, 255, 255);
-            background-image: linear-gradient(rgb(102, 216, 170), rgb(22, 183, 119));
-        }
-        .refresh-button:hover {
-            color: cyan;
-            background-image: linear-gradient(rgb(133, 179, 244), rgb(28, 106, 215));
-        }
-        .commands-btn:hover {
-            color: cyan;
-            background-image: linear-gradient(rgb(84, 84, 84), rgb(0, 0, 0));
-        }
-        pre.code {
-            margin: 1rem;
-            padding: 1rem;
-            border: 2px solid grey;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            background-image: linear-gradient(45deg, white, grey, white);
-            border-radius: 20px;
-            font-family: monospace;
-        }
-    </style>
-    <script>
-        async function loadFile(fileName) {
-        const codeBlock = document.getElementById('code');
-        const outputBlock = document.getElementById('output');
+    <h1>Learning Node.Js | <a href="https://github.com/PR2309/PR2309.github.io/tree/main/Node">GH</a></h1>
 
-        codeBlock.textContent = '// Loading ' + fileName + '...';
-        outputBlock.textContent = ''; // Clear output (not used now)
-
-        try {
-            const response = await fetch(fileName);
-            if (!response.ok) {
-                throw new Error('Failed to load file');
-            }
-
-            const content = await response.text();
-            codeBlock.className = 'code'; // Apply styling
-            codeBlock.textContent = `// FILE: ${fileName}\n\n${content}`;
-        } catch (error) {
-            codeBlock.className = 'code';
-            codeBlock.textContent = `// Failed to load "${fileName}"\n// Error: ${error.message}`;
-        }
-    }
-    </script>
+    
+    <script></script>
 </body>
 </html>
