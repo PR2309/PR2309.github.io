@@ -103,3 +103,19 @@ const fetchData= async ()=>{ //stablize async function
         console.log(`Name: ${value.name}, Email: ${value.email}`);
     });
 };
+
+
+/*********************************/
+// Questions:
+
+
+// console.log("Start");
+// setTimeout(() =>console.log("Timeout"), 0);
+// console.log("Promise");
+// console.log("End");
+
+
+// setTimeout(()=>console.log("Timeout"),0);
+// setImmediate(()=>console.log("Immidieate"));
+// process.nextTick(()=>console.log("NextTick"));
+// console.log("Sync");

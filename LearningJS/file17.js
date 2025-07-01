@@ -1,4 +1,6 @@
 // clouser
+// A closure in JavaScript is when a function remembers and has access to variables from its outer scope, even after that outer function has finished running.
+
 function main(){
     let b=1;
     function sub(){

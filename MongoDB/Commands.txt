@@ -1,0 +1,113 @@
+~> To connect to Mongosh is installed in the device, Command:
+    mongosh
+
+~> To show all the Databases Command:
+    show dbs
+
+~> To Switch to (or create) get inside the database:
+    use dbName
+
+~>  To get back to the command prompt from MongoDB:
+    exit
+
+~> To see all Collections(Tables):
+    show collections
+
+~> This will insert a new collection users with a data inJSON format .i.e, {name:"John",age:21}
+    db.collectionName.insertOne({name:"John",age:21})
+
+~> This will insert a new array of objects in collection users
+    db.collectionName.insertMany([
+        {name:"John",age:21},
+        {name:"Cathy",age:23},
+        {name:"Mike",age:20},
+        {name:"Amy",age:25},
+        {name:"Shawn",age:23},
+        {name:"Chastity",age:27},
+    ])
+
+~> To find a particular set of entity:
+    db.collectionName.find()
+
+~> To find a particular entity:
+    db.collectionName.findOne()
+
+~> To drop a collection:
+    db.collectionName.drop()
+
+~> To skip val number of entities:
+    db.collectionName.find().skip(int n)
+
+~> To get limited n number of entities:
+    db.collectionName.find().limit(int n)
+    db.collectionName.find().limit(2)
+
+~> To sort the elements:
+    db.collectionName.find().sort({name: 1}) // Ascending Order
+    db.collectionName.find().sort({name:-1}) // Decending Order
+    db.collectionName.find().sort({name:1}).limit(1)
+
+~> To show only a particular field:
+    // 0/1 is only taken by _id: if we don't want a field we shouldn't mention it.
+    // 0-> false and 1-> true
+    db.collectionName.find({},{name:1}); // but _id: will be visible
+    db.collectionName.find({},{_id:0,name:1}); // _id: won't be visible
+    db.collectionName.find({},{_id:false,name:true}); // _id: won't be visible
+
+~> It also work with arrays {place:['A','B']}:
+    db.collectionName.find({place:'A'})
+
+~> For Alias field names:
+    db.collectionName.find({},{AliasName:"$OriginalName"})
+
+~> For deletion of one particular entity:
+
+    db.collectionName.remove({age:23},true) //depriciated
+    db.collectionName.deleteOne({age:23})
+
+~> For deletion of a particular type of entities:
+    // takes two parameters condition
+    db.collectionName.deleteMany({age:23})
+
+    // takes condition and optional boolean (true for one, false for all — default is false)
+    // removes all the entities where the condition is matched
+    db.collectionName.remove({age:23}) //depriciated
+
+~> For updation of a particular entity:
+    // updates only one document
+    // first parameter the condition to update
+    // second takes the object with $set and value as object of updated key-value pairs {$set:{key1:value1,key2:value2}}
+    db.collectionName.updateOne({key:condition}, {$set: {key1:value1,key2:value2}})
+
+~> ~> For updating multiple entities at once:
+    db.collectionName.updateMany(
+        { key: condition },
+        { $set: { key1: value1, key2: value2 } }
+    )
+
+~> For replacing the entire document (except _id):
+    db.collectionName.replaceOne(
+        { _id: ObjectId("documentId") },
+        { key1: value1, key2: value2 }
+    )
+
+~> For incrementing a numeric field:
+    db.collectionName.updateOne(
+        { key: condition },
+        { $inc: { numericField: 1 } }
+    )
+
+~> For removing a field:
+    db.collectionName.updateOne(
+        { key: condition },
+        { $unset: { fieldToRemove: "" } }
+    )
+
+~> For renaming a field:
+    db.collectionName.updateOne(
+        { key: condition },
+        { $rename: { oldFieldName: "newFieldName" } }
+    )
+
+~> Give the number of Documents present in the Database
+    db.collectionName.countDocuments()

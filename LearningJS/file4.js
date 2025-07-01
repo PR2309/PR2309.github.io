@@ -7,12 +7,13 @@
 // It checks the condition before executing the code block.
 let i1=1;
 while(i1<=5){
-    if(i===3){
+    if(i1===3){
+        i1++;
         continue; // This will skip the current iteration when i1 is 3
     }
     console.log(i1);
     i1++;
-}
+}console.log();
 
 // For Loop
 // The for loop is a more concise way to write a loop that has a known number of iterations.
@@ -23,7 +24,7 @@ for(let i2=1;i2<=5;i2++){
         console.log("Breaking the loop at i2 = 3");
         break; // This will exit the loop when i2 is 3
     }
-}
+}console.log();
 
 // Do-While Loop
 let i3=1;
@@ -31,3 +32,4 @@ do{
     console.log(i3);
     i3++;
 }while(i3<=0); // // This will work same as while loop but will execute at least once even if the condition is false,
+console.log();

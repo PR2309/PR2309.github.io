@@ -22,6 +22,8 @@ console.log(typeof strAge)
 console.log(typeof Number(strAge))
 let flag="true";
 console.log(typeof Boolean(flag))
+console.log(`Type of null: ${typeof null}`); // null type is object
+
 
 // Operators
 let a1="10";
