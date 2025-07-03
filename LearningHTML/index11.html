@@ -10,7 +10,7 @@
     <!-- <meta http-equiv="refresh" content="30" data-comment="Meta tag to refresh the page every 30 seconds"/> -->
     <!-- <meta name="language" content="en-Us" data-comment="Same as lang attribute in html tag (lang attribute is more preffered)"/> -->
     
-    <title>Learning HTML</title>
+    <title>Formatting Tags</title>
     
     <!-- Base URL setup for Angular Only -->
     <!-- <base href="/MyReader/" data-comment="Set base URL for Angular app deployed under /MyReader/ path on GitHub Pages"/>  -->
@@ -148,83 +148,83 @@
     <!-- CDN font-awesome -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" data-comment="pakage: npm install @fortawesome/fontawesome-free,module:import '@fortawesome/fontawesome-free/css/all.min.css';"/> -->
 </head>
-    <div class="header">
-        <h1>Learning HTML | <a href="https://github.com/PR2309/PR2309.github.io/tree/main/LearningHTML">GH</a></h1>
-        <div class="btns">
-            <a href="./Notes.txt" class="notes-btn">Notes</a>
-            <a href="#" class="refresh-button" onclick="location.reload()">Refresh</a></div>
-        </div>
-    </div>
-    <ol>
-        <li><a href="./index1.html">Introduction to HTML and Basic Tags</a></li>
-        <li><a href="./index2.html">Form Tags</a></li>
-        <li><a href="./index3.html">Multimedia and Hyperlinks</a></li>
-        <li><a href="./index4.html">HTML Internal Links</a></li>
-        <li><a href="./index5.html">External Links and iframe</a></li>
-        <li><a href="./index6.html">Semantic Tags</a></li>
-        <li><a href="./index7.html">List and Table</a></li>
-        <li><a href="./index8.html">Details and Summary Tags</a></li>
-        <li><a href="./index9.html">Map Tags</a></li>
-        <li><a href="./index10.htm">.html & .html Files</a></li>
-        <li><a href="./index11.html">Formatting Tags</a></li>
-    </ol>
+<body>
+    <h1>Formatting Tags:</h1>
     <hr/>
-    <h1>Documents</h1>
-    <ul>
-        <li><a href="./html-questions.pdf" target="_blank">HTML Questions</a></li>
-        <li><a href="./html-notes.pdf" target="_blank">HTML Notes</a></li>
-    </ul>
-    <style>
-        html, body {
-            padding: 0;
-            margin: 0;
-        }
-        .header {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding: 10px;
-        }
-        .btns{
-            padding: 2rem 1rem;
-            display: flex;
-            flex-direction: inherit;
-            justify-content: space-between;
-        }
-        .notes-btn {
-            text-decoration: none;
-            color: white;
-            background-image: linear-gradient(rgb(22, 183, 119), rgb(102, 216, 170));
-            padding: 10px 20px;
-            border-radius: 10px;
-            margin-right: 10px;
-        }
-        .refresh-button {
-            text-decoration: none;
-            color: white;
-            background-image: linear-gradient(rgb(28, 106, 215), rgb(133, 179, 244));
-            padding: 10px 20px;
-            border-radius: 10px;
-        }
-        .notes-btn:hover {
-            color: rgb(0, 255, 255);
-            background-image: linear-gradient(rgb(102, 216, 170), rgb(22, 183, 119));
-        }
-        .refresh-button:hover {
-            color: cyan;
-            background-image: linear-gradient(rgb(133, 179, 244), rgb(28, 106, 215));
-        }
-        pre.code {
-            margin: 1rem;
-            padding: 1rem;
-            border: 2px solid grey;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            background-image: linear-gradient(45deg, white, grey, white);
-            border-radius: 20px;
-            font-family: monospace;
-        }
-    </style>
+    <h2>Visual Styling</h2>
+    <p>
+        <b>This is bold text</b><br>
+        <i>This is italic text</i><br>
+        <u>This is underlined text</u><br>
+        <mark>This is marked text</mark><br>
+        <small>This is small text</small><br>
+        Water is written as H<sub>2</sub>O<br>
+        x<sup>2</sup> represents x squared
+    </p>
+
+    <hr>
+
+    <h2>Semantic Emphasis</h2>
+    <p>
+        <strong>This is strong (important) text</strong><br>
+        <b>This is bold text</b><br>
+        <em>This is emphasized text</em><br>
+        <i>This is italic text</i><br>
+        <del>This text is deleted</del><br>
+        <s>This text is stricked</s><br>
+        <ins>This text is inserted</ins><br>
+        <abbr title="HyperText Markup Language">HTML</abbr> is a markup language<br>
+        <cite>The Great Gatsby</cite> is a famous novel
+    </p>
+
+    <hr>
+
+    <h2>Code / Technical</h2>
+    <p>
+        Use <code>console.log("Hello")</code> to print in JavaScript<br>
+        Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save<br>
+        Output example: <samp>Hello, World!</samp><br>
+        Area = <var>π</var> × <var>r</var><sup>2</sup>
+    </p>
+    <pre>
+function greet(name) {
+    return "Hello, " + name;
+}
+    </pre>
+
+    <hr>
+
+    <h2>Quoting (Quotation and Citation)</h2>
+    <blockquote> <!-- The HTML <blockquote> element defines a section that is quoted from another source. -->
+        This is a blockquote. It is used for longer quotations from another source.
+    </blockquote>
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+        For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which they live.
+    </blockquote>
+
+    <p><q>This is a short inline quote.</q></p>
+    <p><cite>The Republic</cite> by Plato</p>
+    <address>
+        Written by John Doe.<br>
+        Visit us at:<br>
+        Example.com<br>
+        Box 564, Disneyland<br>
+        USA
+    </address>
+
+    <hr>
+
+    <h2>Direction / Control</h2>
+    <p>
+        <bdo dir="rtl">This text is right-to-left</bdo><br>
+        <bdo dir="ltr">This text is left-to-right</bdo><br>
+        Line one<br>Line two (after line break)<br>
+        <span>This is inside a span</span>
+    </p>
+    <div>
+        This is inside a div
+    </div>
+
     <script></script>
 </body>
 </html>

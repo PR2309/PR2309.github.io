@@ -10,7 +10,7 @@
     <!-- <meta http-equiv="refresh" content="30" data-comment="Meta tag to refresh the page every 30 seconds"/> -->
     <!-- <meta name="language" content="en-Us" data-comment="Same as lang attribute in html tag (lang attribute is more preffered)"/> -->
     
-    <title>Learning HTML</title>
+    <title>Color Specifications</title>
     
     <!-- Base URL setup for Angular Only -->
     <!-- <base href="/MyReader/" data-comment="Set base URL for Angular app deployed under /MyReader/ path on GitHub Pages"/>  -->
@@ -148,83 +148,83 @@
     <!-- CDN font-awesome -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" data-comment="pakage: npm install @fortawesome/fontawesome-free,module:import '@fortawesome/fontawesome-free/css/all.min.css';"/> -->
 </head>
-    <div class="header">
-        <h1>Learning HTML | <a href="https://github.com/PR2309/PR2309.github.io/tree/main/LearningHTML">GH</a></h1>
-        <div class="btns">
-            <a href="./Notes.txt" class="notes-btn">Notes</a>
-            <a href="#" class="refresh-button" onclick="location.reload()">Refresh</a></div>
-        </div>
-    </div>
-    <ol>
-        <li><a href="./index1.html">Introduction to HTML and Basic Tags</a></li>
-        <li><a href="./index2.html">Form Tags</a></li>
-        <li><a href="./index3.html">Multimedia and Hyperlinks</a></li>
-        <li><a href="./index4.html">HTML Internal Links</a></li>
-        <li><a href="./index5.html">External Links and iframe</a></li>
-        <li><a href="./index6.html">Semantic Tags</a></li>
-        <li><a href="./index7.html">List and Table</a></li>
-        <li><a href="./index8.html">Details and Summary Tags</a></li>
-        <li><a href="./index9.html">Map Tags</a></li>
-        <li><a href="./index10.htm">.html & .html Files</a></li>
-        <li><a href="./index11.html">Formatting Tags</a></li>
-    </ol>
-    <hr/>
-    <h1>Documents</h1>
-    <ul>
-        <li><a href="./html-questions.pdf" target="_blank">HTML Questions</a></li>
-        <li><a href="./html-notes.pdf" target="_blank">HTML Notes</a></li>
-    </ul>
-    <style>
-        html, body {
-            padding: 0;
-            margin: 0;
-        }
-        .header {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding: 10px;
-        }
-        .btns{
-            padding: 2rem 1rem;
-            display: flex;
-            flex-direction: inherit;
-            justify-content: space-between;
-        }
-        .notes-btn {
-            text-decoration: none;
-            color: white;
-            background-image: linear-gradient(rgb(22, 183, 119), rgb(102, 216, 170));
-            padding: 10px 20px;
-            border-radius: 10px;
-            margin-right: 10px;
-        }
-        .refresh-button {
-            text-decoration: none;
-            color: white;
-            background-image: linear-gradient(rgb(28, 106, 215), rgb(133, 179, 244));
-            padding: 10px 20px;
-            border-radius: 10px;
-        }
-        .notes-btn:hover {
-            color: rgb(0, 255, 255);
-            background-image: linear-gradient(rgb(102, 216, 170), rgb(22, 183, 119));
-        }
-        .refresh-button:hover {
-            color: cyan;
-            background-image: linear-gradient(rgb(133, 179, 244), rgb(28, 106, 215));
-        }
-        pre.code {
-            margin: 1rem;
-            padding: 1rem;
-            border: 2px solid grey;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            background-image: linear-gradient(45deg, white, grey, white);
-            border-radius: 20px;
-            font-family: monospace;
-        }
-    </style>
+<body>
+    <h1>HTML Color Specifications</h1>
+    <pre>
+    HTML colors are specified with predefined color names, or with RGB, HEX, HSL, RGBA, or HSLA values.
+    HTML supports 140 standard color names.
+    In HTML, colors can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values.
+    Types of specifications
+    <pre>
+        Predefined Color Names:
+            common names of colors.
+            lowercase only preffered.
+            Format:     colorNames
+            Exammple:   red, blue, green, yellow, cyan, magenta, black, white, gray, etc.
+    </pre>
+    <pre>
+        RGB (Red Green Blue):
+            three numbers ranging from 0-255 one for each red-green-blue.
+            This means that there are 256 x 256 x 256 = 16777216 possible colors.
+            rgb(255, 0, 0) is displayed as red
+            rgb(0, 255, 0) is displayed as green
+            rgb(0, 0, 255) is displayed as blue
+            Format:     rgb(red, green, blue)
+            Example:    rgb(255, 0, 0)
+    </pre>
+    <pre>
+        RGBA (Red, Green, Blue, Alpha)
+            three numbers ranging from 0-255 one for each red-green-blue. 
+            Alpha controls transparency (0 is fully transparent, 1 is opaque)
+            Format:     rgba(red, green, blue, alpha)
+            Example:    rgba(255, 0, 0, 0.5)
+    </pre>
+    <pre>
+        HEX (Hexadecimal):
+            2 digits each for red, green, and blue in hexadecimal (00 to FF).
+            Format:     #RRGGBB
+            Example:  #ff0000
+            Shorthand (only when pairs are repeated):    #f00
+    </pre>
+    <pre>
+        HSL (Hue, Saturation, Lightness)
+            Hue: 0 to 360 (angle on color wheel)
+                Hue is the color of paint you choose
+                Hue represents the type of color (like red, green, blue, etc.).
+                It is specified as an angle on the color wheel from 0 to 360 degrees.
+                Hue Value and Color:
+                    0	Red
+                    60	Yellow
+                    120	Green
+                    180	Cyan
+                    240	Blue
+                    300	Magenta
+                    360	Red again (circle complete)
+            Saturation: 0% (gray) to 100% (full color)
+                Saturation is how much color pigment vs gray is in it.
+                Controls how vivid or gray the color appears.
+                It is expressed as a percentage:
+                    0% = completely gray (no color)
+                    100% = full color
+            Lightness: 0% (black) to 100% (white)
+                Lightness is how much white or black you mix with it.
+                Controls how light or dark the color is.
+                Also a percentage:
+                    0% = black
+                    100% = white
+                    50% = “normal” lightness (full color)
+            Format: hsl(hue, saturation%, lightness%)
+            Example:    hsl(0, 100%, 50%)
+    </pre>
+    <pre>
+        HSLA (Hue, Saturation, Lightness, Alpha)
+            Hue: 0 to 360 (angle on color wheel)
+            Saturation: 0% (gray) to 100% (full color)
+            Lightness: 0% (black) to 100% (white)
+            Alpha controls transparency (0 is fully transparent, 1 is opaque)
+            Format: hsla(hue, saturation%, lightness%, alpha)
+            Example:    hsla(0, 100%, 50%, 0.5)
+    </pre>
     <script></script>
 </body>
 </html>

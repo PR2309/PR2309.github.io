@@ -1,0 +1,222 @@
+# Theory
+
+~> HTML: Hyper Text Markup Language
+~> It's a type of Markup Language
+~> HTML stands for Hyper Text Markup Language
+~> HTML is the standard markup language for creating Web pages
+~> HTML describes the structure of a Web page
+~> HTML consists of a series of elements
+~> HTML elements tell the browser how to display the content
+~> HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
+
+~> Invetors:
+    1989	Tim Berners-Lee invented www
+    1991	Tim Berners-Lee invented HTML
+~> Web Browsers:
+    The purpose of a web browser (Chrome, Edge, Firefox, Safari) is to read HTML documents and display them correctly.
+    A browser does not display the HTML tags, but uses them to determine how to display the document:
+
+~> Syntax:
+    <OpeningTag attribute="attributeValues"> ... Content </ClosingTag>
+    Opeing and closing tags must have same name and shall be like Braces in opeing and closing hierarchy.
+    void element syntax:  <TagName> or <TagName/>
+
+~> HTML files extensions can either be .html or .htm
+
+~> Command to start HTML files:
+    start "file_path_and_name.html"
+
+~> Structure:
+    - The <!DOCTYPE html> declaration defines that this document is an HTML5 document
+    - The <html> element is the root element of an HTML page
+    - The <head> element contains meta information about the HTML page
+    - The <title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)
+
+~> Comments
+    HTML comments are not displayed in the browser, but they can help document your HTML source code.
+    Single or multiline based on need can be written using same syntax
+    Syntax: <!-- Commented Content -->
+
+~> The <!DOCTYPE> Declaration
+    The <!DOCTYPE> declaration represents the document type, and helps browsers to display web pages correctly.
+    It must only appear once, at the top of the page (before any HTML tags).
+    The <!DOCTYPE> declaration is not case sensitive.
+
+~> View HTML Source Code:
+    Click CTRL + U in an HTML page, or right-click on the page and select "View Page Source".
+    This will open a new tab containing the HTML source code of the page.
+
+~> HTML elements can be nested (this means that elements can contain other elements).
+    All HTML documents consist of nested HTML elements.
+    Never Skip the End Tag
+    Some HTML elements will display correctly, even if you forget the end tag
+    Unexpected results and errors may occur if you forget the end tag.
+
+~> Empty HTML Elements
+    Also called Void or self-closing elements.
+    HTML elements with no content are called empty elements.
+    Without a closing Tag.
+
+~>  HTML is Not Case Sensitive
+    HTML tags are not case sensitive: <P> means the same as <p>.
+    But lowercase is recommended for differen purposes tags as well as attributes.
+
+~> HTML Attributes
+    All HTML elements can have attributes
+    Attributes provide additional information about elements
+    Attributes are always specified in the start tag
+    Attributes usually come in name/value pairs like: name="value"
+
+~> Tooltip in HTML:
+    The title Attribute
+    The title attribute defines some extra information about an element.
+    The value of the title attribute will be displayed as a tooltip when you mouse over the element
+
+~> <p> paragraph tag always tart with a new line.
+~> Use HTML headings for headings only. Don't use headings to make text BIG or bold.
+~> <pre> element is displayed in a fixed-width font (usually Courier)
+~> CSS attribute syntax: <tagname style="property:value;">
+    The CSS text-align property defines the horizontal text alignment for an HTML element:
+
+~> Formatting:
+    Visual Styling: <b>, <i>, <u>, <mark>, <small>, <sub>, <sup>
+    Semantic Emphasis: <strong>, <em>, <del>, <ins>, <abbr>, <cite>
+    Code/Technical: <code>, <kbd>, <samp>, <var>, <pre>
+    Quoting: <blockquote>, <q>, <cite>
+    Direction/Control: <bdo>, <br>, <hr>, <span>, <div>
+    Formatting elements were designed to display special types of text:
+        <b> - Bold text
+        <strong> - Important text
+        <i> - Italic text
+        <em> - Emphasized text
+        <mark> - Marked text
+        <small> - Smaller text
+        <del> - Deleted text
+        <ins> - Inserted text (filled in)
+        <sub> - Subscript text
+        <sup> - Superscript text
+
+~> Quotation and Citation:
+    The HTML <blockquote> element defines a section that is quoted from another source.
+    Browsers usually indent <blockquote> elements.
+    
+    The HTML <q> tag defines a short quotation.
+    Browsers normally insert quotation marks around the quotation.
+
+    <abbr> tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM".
+    Marking abbreviations can give useful information to browsers, translation systems and search-engines.
+    Tip: Use the global title attribute to show the description for the abbreviation/acronym when you mouse over the element.
+
+    The HTML <address> tag defines the contact information for the author/owner of a document or an article.
+    The text in the <address> element usually renders in italic, and browsers will always add a line break before and after the <address> element.
+
+    The HTML <cite> tag defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.).
+    Note: A person's name is not the title of a work.
+    The text in the <cite> element usually renders in italic.
+
+~> <bdo> tags:
+    BDO stands for Bi-Directional Override.
+    The HTML <bdo> tag is used to override the current text direction:
+
+~> HTML Colors:
+    HTML colors are specified with predefined color names, or with RGB, HEX, HSL, RGBA, or HSLA values.
+    HTML supports 140 standard color names.
+    In HTML, colors can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values.
+    Types of specifications
+        Predefined Color Names:
+            common names of colors.
+            lowercase only preffered.
+            Format:     colorNames
+            Exammple:   red, blue, green, yellow, cyan, magenta, black, white, gray, etc.
+        RGB (Red Green Blue):
+            Three numbers ranging from 0-255 one for each red-green-blue.
+            This means that there are 256 x 256 x 256 = 16777216 possible colors.
+            rgb(255, 0, 0) is displayed as red
+            rgb(0, 255, 0) is displayed as green
+            rgb(0, 0, 255) is displayed as blue
+            rgb(0, 0, 0) is displayed as black
+            rgb(255, 255, 255) is displayed as white
+            Format:     rgb(red, green, blue)
+            Example:    rgb(255, 0, 0)
+        RGBA (Red, Green, Blue, Alpha)
+            Three numbers ranging from 0-255 one for each red-green-blue.
+            This means that there are 256 x 256 x 256 = 16777216 possible colors.
+            rgb(255, 0, 0) is displayed as red
+            rgb(0, 255, 0) is displayed as green
+            rgb(0, 0, 255) is displayed as blue
+            rgb(0, 0, 0) is displayed as black
+            rgb(255, 255, 255) is displayed as white
+            Alpha controls transparency (0 is fully transparent, 1 is opaque)
+            Format:     rgba(red, green, blue, alpha)
+            Example:    rgba(255, 0, 0, 0.5)
+        HEX (Hexadecimal):
+            2 digits each for red, green, and blue in hexadecimal (00 to FF).
+            #ff0000 or #f00 is displayed red
+            #00ff00 or #0f0 is displayed green
+            #0000ff or #00f is displayed blue
+            #000000 is displayed black
+            #ffffff is displayed white
+            Format:     #RRGGBB
+            Example:  #ff0000
+            Shorthand (only when pairs are repeated):    #f00
+        HSL (Hue, Saturation, Lightness)
+            Hue is the color of paint you choose
+            Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue like (VIBGYOR).
+            Saturation is how much color pigment vs gray is in it.
+            Saturation is a percentage value. 0% means a shade of gray, and 100% is the full color.
+            Lightness is how much white or black you mix with it.
+            Lightness is also a percentage value. 0% is black, and 100% is white.
+            Hue: 0 to 360 (angle on color wheel)
+            Saturation: 0% (gray) to 100% (full color)
+            Lightness: 0% (black) to 100% (white)
+            Format: hsl(hue, saturation%, lightness%)
+            Example:    hsl(0, 100%, 50%)
+        HSLA (Hue, Saturation, Lightness, Alpha)
+            Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.
+            Saturation is a percentage value. 0% means a shade of gray, and 100% is the full color.
+            Lightness is also a percentage value. 0% is black, and 100% is white.
+            Hue: 0 to 360 (angle on color wheel)
+            Saturation: 0% (gray) to 100% (full color)
+            Lightness: 0% (black) to 100% (white)
+            Alpha controls transparency (0 is fully transparent, 1 is opaque)
+            Format: hsla(hue, saturation%, lightness%, alpha)
+            Example:    hsla(0, 100%, 50%, 0.5)
+
+~> HTML Links:
+    HTML links are hyperlinks.
+    When we move the mouse over a link, the mouse arrow will turn into a pointer(little hand).
+    A link does not have to be text. A link can be an image or any other HTML element!
+    Links are found in nearly all web pages.
+    Links allow users to click their way from page to page.
+    By default all hyperlinks (<a> tags) are underlined.
+    Colors:
+        An unvisited link is underlined and blue, changed using css pseudo class :link
+        A visited link is underlined and purple, changed using css pseudo class :visited
+        An active link is underlined and red, changed using css pseudo class :active or :hover is also used sometimes.
+        Tip: Links can of course be styled with CSS, to get another look!
+    target Attribute:
+        The target attribute specifies where to open the linked document.
+        The target attribute can have one of the following values:
+            _self - Default. Opens the document in the same window/tab as it was clicked
+            _blank - Opens the document in a new window or tab
+            _parent - Opens the document in the parent frame
+            _top - Opens the document in the full body of the window
+    Absolute URL:
+        Absolute URL (a full web address) in the href attribute.
+    Local URL:
+        A local link (a link to a page within the same website) is specified with a relative URL (without the "https://www" part):
+    we use "text-decoration:none;" CSS property to remove underlines.
+    JavaScript allows you to specify what happens at certain events, such as a click of a button, turninig them into link sometimes.
+    Using Id of an element in href #idName is termed as Bookmarks in HTML 
+    Syntax: <a href="url">link text</a>
+
+~> Favicons:
+    A favicon is a small image, so it should be a simple image with high contrast.
+    Create custom favicon on sites like https://www.favicon.cc.
+    Place it in the head after title tag.
+    Syntax: <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+~> Title tag ( <title> ):
+    defines a title in the browser toolbar
+    provides a title for the page when it is added to favorites
+    displays a title for the page in search engine-results
