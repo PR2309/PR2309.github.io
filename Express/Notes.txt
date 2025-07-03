@@ -1,0 +1,13 @@
+~> To install Express.js:
+    - we need node and mongoDB
+    - npm i express
+
+~> Nodemon Package:
+    Whenever we chagne the code we need to restart the server, to avoid this closing and starting again and again we use a pakage named "nodemon".
+
+~> API checking:
+    To check APIs we use Postman or ThunderClient instea of doing it on browser, as it's only helpful to GET requests.
+
+~> Postman:
+    command to start:
+        start postman
