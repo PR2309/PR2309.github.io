@@ -207,8 +207,15 @@
         A local link (a link to a page within the same website) is specified with a relative URL (without the "https://www" part):
     we use "text-decoration:none;" CSS property to remove underlines.
     JavaScript allows you to specify what happens at certain events, such as a click of a button, turninig them into link sometimes.
-    Using Id of an element in href #idName is termed as Bookmarks in HTML 
     Syntax: <a href="url">link text</a>
+
+~> HTML Bookmarks:
+    HTML links can be used to create bookmarks, so that readers can jump to specific parts of a web page.
+    We can also add a link to a bookmark on another page
+    The id attribute is used to create a bookmarks.
+    Use the id attribute (id="value") to define bookmarks in a page
+    Use the href attribute (href="#value") to link to the bookmark
+    Syntax: <a href="fileName.html#idName">Text</a>
 
 ~> Favicons:
     A favicon is a small image, so it should be a simple image with high contrast.
@@ -220,3 +227,5 @@
     defines a title in the browser toolbar
     provides a title for the page when it is added to favorites
     displays a title for the page in search engine-results
+
+~>

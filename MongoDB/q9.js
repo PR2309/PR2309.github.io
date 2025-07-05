@@ -20,3 +20,4 @@ db.employees.find({ name: { $regex: "cathy",$options:"i" } });
 db.employees.find({ name: { $regex: "^C" } });
 
 db.employees.find({ name: { $regex: "y$" } });
+

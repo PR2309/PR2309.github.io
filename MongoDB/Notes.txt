@@ -68,8 +68,8 @@ after download and installation, set enviroment variable path for it's bin folde
 
 mongodump -d deatabaseName -o path
 
--d:for database paramenter name
--o: output whenere we  have to dump the backup
+-d: for database paramenter name
+-o: output where we have to dump the backup
 
 to restore:
 mongorestore -d databaseName "path_of_backup"

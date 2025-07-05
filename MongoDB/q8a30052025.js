@@ -1,12 +1,12 @@
 
-// Giving Alias 
+// Giving Alias
 db.employees.aggregate([
     {$project: {_id:0,name:1,dept:"$department"}}
 ])
 
 // Showing extra field
 db.employees.aggregate([
-    {$project: {_id:0,name:1,dept:"$department",Grade:"Grade A"}} // just shows GRade field don't save it
+    {$project: {_id:0,name:1,dept:"$department",Grade:"Grade A"}} // just shows Grade field don't save it
 ])
 
 // Conditionals - Teranry Operator
